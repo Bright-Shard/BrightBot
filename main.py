@@ -69,5 +69,16 @@ async def ban(ctx, user: discord.Member, *banReason: str):
   await user.ban(reason=finalReason)
   await ctx.send(f'{user.name} was HAMMERED by {ctx.author}, RIP.')
 
+@bot.command(name='kick',brief='Kick someone from the server. Needs the admin_commands role.',description='Kicks the person named in this command. You can ping them or just type out their username.',aliases=['Kick','remove','Remove'])
+@commands.has_role('admin_commands')
+async def kick(ctx, user: discord.Member, *kickReason: str):
+  finalReason = ''
+  for i in kickReason:
+    finalReason += i
+  finalReason += '\n Kicked by '
+  finalReason += {ctx.author}
+  await user.kick(reason=finalReason)
+  await ctx.send(f'{ctx.author} decided {user.name} could no longer be with us.')
+
 keep_alive()
 bot.run(os.getenv('TOKEN'))
