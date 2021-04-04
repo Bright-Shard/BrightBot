@@ -11,7 +11,7 @@ These commands can only be run by users in the server that have the admin_comman
 
 This script uses the discord.py library for commands and command cogs.
 '''
-import discord, os
+import discord, os, asyncio
 from discord.ext import commands
 
 class admin(commands.Cog, name="Admin Commands"):
