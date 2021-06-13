@@ -7,14 +7,14 @@ from server import keep_alive # This is the web server, used to keep the bot onl
 import asyncio # Used for timed delays
 import random # Used to pick random numbers
 import twitter # Used for getting twitter stuff
-import adminCommands, userCommands, betaCommands # Import commands because they are in separate files
+import adminCommands, userCommands, betaCommands # Import commands from separate files
 
 # Twitter API for getting tweets
-twit = twitter.Twitter(auth=twitter.OAuth(
-  os.getenv('ATOKEN'), # Set environment variable ATOKEN to your access token
-  os.getenv('ASECRET'), # Set environment variable ASECRET to your access secret
-  os.getenv('CKEY'), # Set environment variable CKEY to your API key
-  os.getenv('CSEC'))) # Set environment variable CSEC to your API secret
+twit = twitter.Api(
+  access_token_key=os.getenv('ATOKEN'), # Set env variable ATOKEN to your access token
+  access_token_secret=os.getenv('ASECRET'), # Set env variable ASECRET to your access secret
+  consumer_key=os.getenv('CKEY'), # Set env variable CKEY to your API key
+  consumer_secret=os.getenv('CSEC')) # Set env variable CSEC to your API secret
 
 botIntents = discord.Intents.default() # Declare the bot's intents, AKA what permissions it has as a Discord bot
 botIntents.members = True
@@ -23,11 +23,11 @@ bot = commands.Bot(command_prefix=".",intents=botIntents) # Load the bot
 bot.remove_command('help') # Remove help command so we can insert our own
 
 global GMCTweets # Get tweets from Giant Military Cats' twitter
-GMCTweets = twit.statuses.user_timeline(screen_name='giantcat9',count=30)
+GMCTweets = twit.GetUserTimeline(screen_name='giantcat9',count=30)
 @tasks.loop(hours=12.0)
 async def getTwitter():
   global GMCTweets
-  GMCTweets = twit.statuses.user_timeline(screen_name='giantcat9',count=30)
+  GMCTweets = twit.GetUserTimeline(screen_name='giantcat9',count=30)
 
 @bot.command(name='help',brief='The help command. Run help <command> for help on a specific command.',description='Run .help to see the list of commands, or .help <command> for info on a specific command.',aliases=['Help','HELP'])
 async def help(ctx, *section: str):

@@ -12,7 +12,7 @@ from discord.ext import commands
 
 class user(commands.Cog, name="User Commands"):
   @commands.command(name='meme',brief='Gets a random meme from teh interwebz.',description='Gets a meme from [an API](https://meme-api.herokuapp.com/gimme), then sends it in the chat.',aliases=['Meme'])
-  async def meme(ctx):
+  async def meme(self, ctx):
     content = requests.get('https://meme-api.herokuapp.com/gimme')
     refinedContent = json.loads(content.text)
     msg = discord.Embed(title=refinedContent['title'])
@@ -20,7 +20,8 @@ class user(commands.Cog, name="User Commands"):
     await ctx.send(embed=msg)
 
   @commands.command(name='GMC',brief='Gets a random tweet from Giant Military Cats.',description='Uses twitter to get a random tweet from [Giant Military Cats](https://twitter.com/giantcat9).',aliases=['gmc','cat','giantcat'])
-  async def GMC(ctx):
+  async def GMC(self, ctx):
+    print(GMCTweets[0])
     try:
       tweet = GMCTweets[random.randint(0,29)]
       text = tweet['text'] + '\n Source: https://twitter.com/giantcat9'

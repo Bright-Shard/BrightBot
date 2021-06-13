@@ -228,14 +228,6 @@ version = "1.0.0"
 
 [[package]]
 category = "main"
-description = "An API and command-line toolset for Twitter (twitter.com)"
-name = "twitter"
-optional = false
-python-versions = "*"
-version = "1.18.0"
-
-[[package]]
-category = "main"
 description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
 optional = false
@@ -267,7 +259,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [metadata]
-content-hash = "5336b406117a4257148ceb941837a481b49e3a72b0c97054fdafb01bfa30c092"
+content-hash = "e30ae5762bfa1d3a85dc784083260e8d5cfa0ea859edd20dc52a78fd5f2d10ef"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -469,10 +461,6 @@ requests-oauthlib = [
 ]
 sgmllib3k = [
     {file = "sgmllib3k-1.0.0.tar.gz", hash = "sha256:7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9"},
-]
-twitter = [
-    {file = "twitter-1.18.0-py2.py3-none-any.whl", hash = "sha256:52545fd3b70d3d3807d3ce62d1a256727856d784d1630d64dedcc643aaf0b908"},
-    {file = "twitter-1.18.0.tar.gz", hash = "sha256:acdc85e5beea752967bb64c63bde8b915c49a31a01db1b2fecccf9f2c1d5c44d"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
