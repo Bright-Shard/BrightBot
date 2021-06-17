@@ -22,17 +22,17 @@ Currently, BrightBot has the following commands:
 
 I plan to implement more commands in the future, of course. These might include:
 - **Giveaway** - Starts a giveaway
-- **GuidedMsgRole** - Set up a Reaction ROles message with a wizard instead of passing arguments.
+- **GuidedMsgRole** - Set up a Reaction Roles message with a wizard instead of passing arguments.
 
- Some commands will require the `admin_commands` role. These are the commands listed under **[Admin Commands]**. You currently will need to set that role up yourself, but it's not hard - just make a role with the name `admin_commands`, you don't even need to colour it or give it permissions. The rest of the commands, listed under **[User Commands]**, can be run by anybody.
+ The commands under **[Admin Commands]** need the `admin_commands` role to run. If you don't have the role, the bot will send a message to remind you about it. You currently will need to set that role up yourself, but it's not hard - just make a role with the name `admin_commands`, you don't even need to colour it or give it permissions. The rest of the commands, listed under **[User Commands]**, can be run by anybody.
 
  # How do I run BrightBot?
  There are currently 2 options.
  1. **Add the bot to your server** - Just add the bot to your own server. The link is [here](https://discord.com/api/oauth2/authorize?client_id=745433967486042133&permissions=8&scope=bot).
- 2. **Run your own instance of the bot** - Because this bot is open-source, you can run it yourself! I'd recommend doing it on [Replit](https://replit.com), unless you have your own cloud service, because Replit is free. The only trouble is, if you are on Replit, you will need to set up some sort of bot to visit the server in `server.py` every so often (Under an hour), since if the webpage doesn't get a visit in 1 hour, Replit will stop the program. The easiest way to do this is via a website uptime monitor, like [MonitorUptime](https://monitoruptime.io) or [UptimeRobot](https://uptimerobot.com), because they are free and will connect to the website every few minutes (To see if it's up, but this will also keep your bot running.)
+ 2. **Run your own instance of the bot** - Because this bot is open-source, you can run it yourself! I'd recommend doing it on [Replit](https://replit.com), unless you have your own cloud service, because Replit is free. The only trouble is, if you are on Replit, you will need to set up some sort of bot to visit the web server run with the bot at least once per hour, since if the webpage doesn't get a visit in 1 hour, Replit will stop the program. The easiest way to do this is via a website uptime monitor, like [MonitorUptime](https://monitoruptime.io) or [UptimeRobot](https://uptimerobot.com), because they are free and will connect to the website every few minutes (To see if it's up, but this will also keep your bot running as the website *technically* got a hit.)
 
  # Can't I just use [insert bot name here]?
  Yeah, obviously, you're free to use whatever bot you want - however, if  you run BrightBot, you can see what is going on behind the scenes. With other bots, you don't know what's happening, and, what's more, some of them want lots of money for basic features. That's why I have BrightBot - it's a free alternative, plus, you can run and modify it yourself. In addition, BrightBot can help you make your own Discord bots - you can see my code, and use it as inspiration for your own.
 
  # Licensing
-This program is licensed under GPL. See the file `License.md` for more information.
+This program is licensed under GPL. See the file `LICENSE.md` for more information.
