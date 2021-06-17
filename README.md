@@ -3,7 +3,9 @@ BrightBot is a Discord bot written with the Discord.py library made to run on [R
 
 # What commands does BrightBot have?
 Currently, BrightBot has the following commands:
+
 **[Admin Commands]**
+
 - **Ban** - Bans someone from the server.
 - **Kick** - Kicks someone from the server.
 - **Purge** - Clears messages from the chat.
@@ -14,6 +16,7 @@ Currently, BrightBot has the following commands:
 - **MsgRole** - Set up a Reaction Roles message (When a user reacts, they get a role. When they unreact, they lose the role).
 - **RulesMsg** - Set up a custom embed, useful for making server rules. Unlike the other commands, RulesMsg uses a setup wizard instead of passing arguments.
 **[User Commands]**
+
 - **GMC** - Gets a random tweet from [Giant Military Cats](https://twitter.com/giantcat9). If you don't know what GMC is, it's a twitter account that posts ridiculous military scenes with giant cats in the middle of it all.
  - **Meme** - Gets a random meme from teh interwebz
 
